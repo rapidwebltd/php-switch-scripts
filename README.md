@@ -21,7 +21,7 @@ Yuo should see something similar to the below.
 
 ```
 Description:    Ubuntu 16.04.3 LTS
-Server version: Apache/2.4.18 (Ubuntu
+Server version: Apache/2.4.18 (Ubuntu)
 ```
 
 ## Setup
