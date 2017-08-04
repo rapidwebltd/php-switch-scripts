@@ -17,7 +17,7 @@ You can check you have the required versions by running the following command.
 lsb_release -a | grep Ubuntu && apache2 -v | grep Apache
 ```
 
-Yuo should see something similar to the below.
+You should see something similar to the below.
 
 ```
 Description:    Ubuntu 16.04.3 LTS
@@ -56,11 +56,11 @@ Once setup is complete, you can easily switch between different PHP versions usi
 ./switch-to-php-7.0.sh
 ```
 
-This will alter the versions of PHP running in Apache and the command line. Your password will be required to enable/disable Apache modules, restart the web server and altering the default PHP CLI version.
+This will alter the versions of PHP running in Apache and the command line. Your password will be required to enable/disable Apache modules, restart the web server and alter the default PHP CLI version.
 
 ## Verification
 
-If you wish, you can check that the switch was complete successfully.
+If you wish, you can check that the switch was completed successfully.
 
 You can verify the command line version of PHP has changed with the following command.
 
