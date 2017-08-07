@@ -29,14 +29,14 @@ Server version: Apache/2.4.18 (Ubuntu)
 First, clone the repository, and change directory if you have not already done so.
 
 ```
-https://github.com/rapidwebltd/php-switch-scripts.git
+git clone https://github.com/rapidwebltd/php-switch-scripts.git
 cd php-switch-scripts
 ```
 
 Next, to setup all the supported PHP versions and common PHP extensions for them, you just need to run the `setup.sh` script. This is shown below.
 
 ```
-./setup.php
+./setup.sh
 ```
 
 This may take some time depending on your system and connection speed. It will also require you to enter your password to install new packages.
