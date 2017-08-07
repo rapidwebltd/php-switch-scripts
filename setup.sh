@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "* Refreshing software repositories..."
+sudo apt-get update > /dev/null
+
+echo "* Installing prerequisite software packages..."
+sudo apt-get install -y software-properties-common > /dev/null
+
 echo "* Setting up third-party repository to allow installation of multiple PHP versions..."
 sudo add-apt-repository -y ppa:ondrej/php > /dev/null
 
