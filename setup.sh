@@ -22,7 +22,13 @@ echo "* Installing PHP 7.0..."
 sudo apt-get install -y php7.0 php7.0-common php7.0-cli > /dev/null
 
 echo "* Installing PHP 7.0 extensions..."
-sudo apt-get install -y php7.0-gd php7.0-mysql php7.0-sqlite php7.0-soap php7.0-xsl php7.0-json php7.0-opcache php7.0-mbstring php7.0-readline php7.0-curl php7.0-mcrypt php7.0-xml php7.0-zip > /dev/null
+sudo apt-get install -y php7.0-gd php7.0-mysql php7.0-sqlite3 php7.0-soap php7.0-xsl php7.0-json php7.0-opcache php7.0-mbstring php7.0-readline php7.0-curl php7.0-mcrypt php7.0-xml php7.0-zip > /dev/null
+
+echo "* Installing PHP 7.1..."
+sudo apt-get install -y php7.1 php7.1-common php7.1-cli > /dev/null
+
+echo "* Installing PHP 7.1 extensions..."
+sudo apt-get install -y php7.1-gd php7.0-mysql php7.1-sqlite3 php7.1-soap php7.1-xsl php7.1-json php7.1-opcache php7.1-mbstring php7.1-readline php7.1-curl php7.1-mcrypt php7.1-xml php7.1-zip > /dev/null
 
 echo "* Installing additional PHP extensions..."
 sudo apt-get install -y php-memcache php-memcached  > /dev/null
