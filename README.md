@@ -1,13 +1,9 @@
-# PHP Switch Scripts
+# 🔄 PHP Switch Scripts
 
 These scripts are designed to aid in the setup of and switching between multiple PHP versions in Ubuntu 16.04 LTS.
 
-Currently they support switching to the following versions of PHP:
+<img src="assets/images/usage.png" />
 
-* 5.6
-* 7.0
-* 7.1
-* 7.2
 
 Please note that these scripts install packages from a third-party repository, provided by [Ondřej Surý](https://twitter.com/oerdnj). More details are available at the repository's [website](https://deb.sury.org/), [PPA page on Launchpad](https://launchpad.net/~ondrej/+archive/ubuntu/php/) and [Twitter account](https://twitter.com/debsuryorg).
 
@@ -59,6 +55,8 @@ Once setup is complete, you can easily switch between different PHP versions usi
 ```
 ./switch-to-php-5.6.sh
 ./switch-to-php-7.0.sh
+./switch-to-php-7.1.sh
+./switch-to-php-7.2.sh
 ```
 
 This will alter the versions of PHP running in Apache and the command line. Your password will be required to enable/disable Apache modules, restart the web server and alter the default PHP CLI version.
