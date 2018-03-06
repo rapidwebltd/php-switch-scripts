@@ -2,7 +2,12 @@
 
 These scripts are designed to aid in the setup of and switching between multiple PHP versions in Ubuntu 16.04 LTS.
 
-Currently they support switching between PHP 5.6 and PHP 7.0.
+Currently they support switching to the following versions of PHP:
+
+* 5.6
+* 7.0
+* 7.1
+* 7.2
 
 Please note that these scripts install packages from a third-party repository, provided by [Ondřej Surý](https://twitter.com/oerdnj). More details are available at the repository's [website](https://deb.sury.org/), [PPA page on Launchpad](https://launchpad.net/~ondrej/+archive/ubuntu/php/) and [Twitter account](https://twitter.com/debsuryorg).
 
