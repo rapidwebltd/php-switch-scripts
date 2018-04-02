@@ -1,6 +1,6 @@
 # 🔄 PHP Switch Scripts
 
-These scripts are designed to aid in the setup of and switching between multiple PHP versions in Ubuntu 16.04 LTS.
+These scripts are designed to aid in the setup of and switching between multiple PHP versions in Ubuntu 14.04 LTS or newer.
 
 <img src="assets/images/usage.png" />
 
@@ -9,7 +9,7 @@ Please note that these scripts install packages from a third-party repository, p
 
 ## Requirements
 
-* Ubuntu 16.04.* LTS
+* Ubuntu 14.04.* LTS or newer
 * Apache 2.4.*
 
 You can check you have the required versions by running the following command.
@@ -21,7 +21,7 @@ lsb_release -a | grep Ubuntu && apache2 -v | grep Apache
 You should see something similar to the below.
 
 ```
-Description:    Ubuntu 16.04.3 LTS
+Description:    Ubuntu 14.04.5 LTS
 Server version: Apache/2.4.18 (Ubuntu)
 ```
 
