@@ -9,6 +9,9 @@ sudo a2dismod php7.1 > /dev/null
 echo "* Disabling Apache PHP 7.2 module..."
 sudo a2dismod php7.2 > /dev/null
 
+echo "* Disabling Apache PHP 7.3 module..."
+sudo a2dismod php7.3 > /dev/null
+
 echo "* Enabling Apache PHP 5.6 module..."
 sudo a2enmod php5.6 > /dev/null
 

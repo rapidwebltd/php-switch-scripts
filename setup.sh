@@ -34,9 +34,15 @@ echo "* Installing PHP 7.2..."
 sudo apt-get install -y php7.2 php7.2-common php7.2-cli > /dev/null
 
 echo "* Installing PHP 7.2 extensions..."
-sudo apt-get install -y php7.2-bz2 php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-readline php7.2-soap php7.2-sqlite3 php7.2-tidy php7.2-xml php7.2-xsl php7.2-zip php-redis > /dev/null
+sudo apt-get install -y php7.2-bz2 php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-readline php7.2-soap php7.2-sqlite3 php7.2-tidy php7.2-xml php7.2-xsl php7.2-zip > /dev/null
+
+echo "* Installing PHP 7.3..."
+sudo apt-get install -y php7.3 php7.3-common php7.3-cli > /dev/null
+
+echo "* Installing PHP 7.3 extensions..."
+sudo apt-get install -y php7.3-bz2 php7.3-curl php7.3-gd php7.3-json php7.3-mbstring php7.3-mysql php7.3-opcache php7.3-readline php7.3-soap php7.3-sqlite3 php7.3-tidy php7.3-xml php7.3-xsl php7.3-zip > /dev/null
 
 echo "* Installing additional PHP extensions..."
-sudo apt-get install -y php-memcache php-memcached  > /dev/null
+sudo apt-get install -y php-memcache php-memcached php-redis  > /dev/null
 
 echo "* Setup complete. You may now use the 'switch-to-php-*.*.sh' scripts."
