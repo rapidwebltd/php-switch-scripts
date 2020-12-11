@@ -59,6 +59,7 @@ Once setup is complete, you can easily switch between different PHP versions usi
 ./switch-to-php-7.2.sh
 ./switch-to-php-7.3.sh
 ./switch-to-php-7.4.sh
+./switch-to-php-8.0.sh
 ```
 
 This will alter the versions of PHP running in Apache and the command line. Your password will be required to enable/disable Apache modules, restart the web server and alter the default PHP CLI version.
@@ -78,4 +79,3 @@ You can check the version of PHP running in Apache by creating a new PHP file, t
 ```php
 <?php phpinfo(); ?>
 ```
-
