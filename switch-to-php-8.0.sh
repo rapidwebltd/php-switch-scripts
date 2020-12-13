@@ -25,6 +25,6 @@ echo "* Restarting Apache..."
 sudo service apache2 restart > /dev/null
 
 echo "* Switching CLI PHP to 8.0..."
-sudo update-alternatives --set php /usr/bin/php7.4 > /dev/null
+sudo update-alternatives --set php /usr/bin/php8.0 > /dev/null
 
 echo "* Switch to PHP 8.0 complete."
