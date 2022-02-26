@@ -6,12 +6,14 @@ With this script switching between PHP-versions in Ubuntu is easy!
 
 
 
-More info about requirements, checks and usage in the [original documentation](https://github.com/rapidwebltd/php-switch-scripts/blob/a477928c0fb37a0be7d12892a13aa708c55b0342/README.md) and on https://github.com/rapidwebltd/php-switch-scripts
+More info about requirements, checks and usage in the [original documentation](https://github.com/rapidwebltd/php-switch-scripts/blob/a477928c0fb37a0be7d12892a13aa708c55b0342/README.md)
 
 
 ## Installation
 Give both scripts execute permission:
+
 `chmod +x setup.sh`
+
 `chmod +x switch.php.sh`
 
 Run `setup.sh` once.
@@ -26,6 +28,6 @@ Run `switch-php.sh`, you can choose to which version you want to switch:
 <img src="switch-php.png" />
 
 ## Sources
-https://github.com/rapidwebltd/php-switch-scripts
-https://askubuntu.com/a/1386907
+- https://github.com/rapidwebltd/php-switch-scripts
+- https://askubuntu.com/a/1386907
 
