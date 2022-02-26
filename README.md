@@ -1,81 +1,31 @@
 # 🔄 PHP Switch Scripts
 
-These scripts are designed to aid in the setup of and switching between multiple PHP versions in Ubuntu 14.04 LTS or newer.
+This is my tweaked version of https://github.com/rapidwebltd/php-switch-scripts which I use almost daily since 2019.
 
-<img src="assets/images/usage.png" />
+With this script switching between PHP-versions in Ubuntu is easy!
 
 
-Please note that these scripts install packages from a third-party repository, provided by [Ondřej Surý](https://twitter.com/oerdnj). More details are available at the repository's [website](https://deb.sury.org/), [PPA page on Launchpad](https://launchpad.net/~ondrej/+archive/ubuntu/php/) and [Twitter account](https://twitter.com/debsuryorg).
 
-## Requirements
+More info about requirements, checks and usage in the [original documentation](https://github.com/rapidwebltd/php-switch-scripts/blob/a477928c0fb37a0be7d12892a13aa708c55b0342/README.md) and on https://github.com/rapidwebltd/php-switch-scripts
 
-* Ubuntu 14.04.* LTS or newer
-* Apache 2.4.*
 
-You can check you have the required versions by running the following command.
+## Installation
+Give both scripts execute permission:
+`chmod +x setup.sh`
+`chmod +x switch.php.sh`
 
-```
-lsb_release -a | grep Ubuntu && apache2 -v | grep Apache
-```
+Run `setup.sh` once.
 
-You should see something similar to the below.
+This may take some time depending on your system and connection speed.
+It will require you to enter your password to install new packages.
 
-```
-Description:    Ubuntu 14.04.5 LTS
-Server version: Apache/2.4.18 (Ubuntu)
-```
-
-## Setup
-
-First, clone the repository, and change directory if you have not already done so.
-
-```
-git clone https://github.com/rapidwebltd/php-switch-scripts.git
-cd php-switch-scripts
-```
-
-Next, to setup all the supported PHP versions and common PHP extensions for them, you just need to run the `setup.sh` script. This is shown below.
-
-```
-./setup.sh
-```
-
-This may take some time depending on your system and connection speed. It will also require you to enter your password to install new packages.
-
-When you see a message similar to the following, setup is complete and you are ready to switch between PHP versions at will.
-
-```
-* Setup complete. You may now use the 'switch-to-php-*.*.sh' scripts.`
-```
 
 ## Usage
+Run `switch-php.sh`, you can choose to which version you want to switch:
 
-Once setup is complete, you can easily switch between different PHP versions using the appropriately named scripts. Examples are shown below.
+<img src="switch-php.png" />
 
-```
-./switch-to-php-5.6.sh
-./switch-to-php-7.0.sh
-./switch-to-php-7.1.sh
-./switch-to-php-7.2.sh
-./switch-to-php-7.3.sh
-./switch-to-php-7.4.sh
-```
-
-This will alter the versions of PHP running in Apache and the command line. Your password will be required to enable/disable Apache modules, restart the web server and alter the default PHP CLI version.
-
-## Verification
-
-If you wish, you can check that the switch was completed successfully.
-
-You can verify the command line version of PHP has changed with the following command.
-
-```
-php -v | grep PHP
-```
-
-You can check the version of PHP running in Apache by creating a new PHP file, that calls the `phpinfo()` method, then accessing it via a web browser. An example is shown below.
-
-```php
-<?php phpinfo(); ?>
-```
+## Sources
+https://github.com/rapidwebltd/php-switch-scripts
+https://askubuntu.com/a/1386907
 
