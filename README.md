@@ -10,12 +10,6 @@ More info about requirements, checks and usage in the [original documentation](h
 
 
 ## Installation
-Give both scripts execute permission:
-
-`chmod +x setup.sh`
-
-`chmod +x switch.php.sh`
-
 Run `setup.sh` once.
 
 This may take some time depending on your system and connection speed.
@@ -26,6 +20,7 @@ It will require you to enter your password to install new packages.
 Run `switch-php.sh`, you can choose to which version you want to switch:
 
 <img src="switch-php.png" />
+
 
 ## Sources
 - https://github.com/rapidwebltd/php-switch-scripts
