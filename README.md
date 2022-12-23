@@ -13,10 +13,14 @@ More info about requirements, checks and usage in the [original documentation](h
 Run `setup.sh` once.
 
 This may take some time depending on your system and connection speed.
+
 It will require you to enter your password to install new packages.
 
+
 I added an alias to my /home/{user}/.bash_aliases so I can just run `switch` from my CLI:
+
 `alias switch='sudo /home/switch-php.sh'`
+
 
 ## Usage
 Run `switch-php.sh`, you can choose to which version you want to switch:
