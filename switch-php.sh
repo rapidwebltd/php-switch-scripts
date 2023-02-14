@@ -38,14 +38,14 @@ function switch_php() {
 
     if [[ $cur -gt 0 ]]
     then
-        echo "* Disabling Apache PHP $CURRENT_PHP_VERSION module"
-        sudo a2dismod php$CURRENT_PHP_VERSION > /dev/null
-
         echo "* Enabling Apache PHP ${options[$cur]} module"
-        sudo a2enmod php${options[$cur]} > /dev/null
+        sudo a2enconf php${options[$cur]}-fpm
+
+        echo "* Disabling Apache PHP $CURRENT_PHP_VERSION module"
+        sudo a2disconf php$CURRENT_PHP_VERSION-fpm
 
         echo "* Restarting Apache..."
-        sudo service apache2 restart > /dev/null
+        sudo service apache2 restart
 
         echo "* Switching CLI PHP to ${options[$cur]}"
         sudo update-alternatives --set php /usr/bin/php${options[$cur]} > /dev/null
