@@ -77,6 +77,8 @@ sudo apt-get install php php-common gcc > /dev/null
 sudo apt-get install imagemagick > /dev/null
 sudo apt-get install php-imagick php5.6-imagick php7.0-imagick php7.1-imagick php7.2-imagick php7.3-imagick php7.4-imagick php8.0-imagick php8.1-imagick php8.2-imagick
 
+sudo apt-get install php5.6-fpm php7.0-fpm php7.1-fpm php7.2-fpm php7.3-fpm php7.4-fpm  php8.0-fpm php8.1-fpm php8.2-fpm
+
 echo "* Enabeling mod_rewrite, mod_headers and vhost_alias..."
 sudo a2enmod rewrite
 sudo a2enmod headers
