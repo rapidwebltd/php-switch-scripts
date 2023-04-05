@@ -15,7 +15,6 @@ sudo apt-get update > /dev/null
 
 echo "* Installing PHP 5.6..."
 sudo apt-get install -y php5.6 php5.6-common php5.6-cli > /dev/null
-sudo apt-get install php5.6 php5.6-fpm > /dev/null
 
 echo "* Installing PHP 5.6 extensions..."
 sudo apt-get install -y php5.6-curl php5.6-mcrypt php5.6-soap php5.6-bz2 php5.6-gd php5.6-mysql php5.6-sqlite3 php5.6-json php5.6-opcache php5.6-xml php5.6-mbstring php5.6-readline php5.6-xmlrpc php5.6-zip php5.6-intl php-redis > /dev/null
@@ -68,15 +67,20 @@ sudo apt-get install -y php8.2 php8.2-common php8.2-cli > /dev/null
 echo "* Installing PHP 8.2 extensions..."
 sudo apt-get install -y php8.2-bz2 php8.2-curl php8.2-gd php8.2-mbstring php8.2-mysql php8.2-opcache php8.2-readline php8.2-soap php8.2-sqlite3 php8.2-tidy php8.2-xml php8.2-xsl php8.2-zip php8.2-intl > /dev/null
 
-echo "* Installing additional (PHP) extensions..."
+echo "* Installing memcached extensions..."
 sudo apt-get install -y memcached php-memcache php-memcached php-redis > /dev/null
 
+echo "* Installing imap extensions..."
 sudo apt-get install -y php-imap php7.2-imap php7.3-imap php7.4-imap php8.0-imap php8.1-imap php8.2-imap > /dev/null
 
+echo "* Installing php-common and gcc..."
 sudo apt-get install php php-common gcc > /dev/null
+
+echo "* Installing imagemagick/imagick extensions..."
 sudo apt-get install imagemagick > /dev/null
 sudo apt-get install php-imagick php5.6-imagick php7.0-imagick php7.1-imagick php7.2-imagick php7.3-imagick php7.4-imagick php8.0-imagick php8.1-imagick php8.2-imagick
 
+echo "* Installing PHP-FPM..."
 sudo apt-get install php5.6-fpm php7.0-fpm php7.1-fpm php7.2-fpm php7.3-fpm php7.4-fpm  php8.0-fpm php8.1-fpm php8.2-fpm
 
 echo "* Enabeling mod_rewrite, mod_headers and vhost_alias..."
