@@ -68,7 +68,7 @@ echo "* Installing PHP 8.2 extensions..."
 sudo apt-get install -y php8.2-bz2 php8.2-curl php8.2-gd php8.2-mbstring php8.2-mysql php8.2-opcache php8.2-readline php8.2-soap php8.2-sqlite3 php8.2-tidy php8.2-xml php8.2-xsl php8.2-zip php8.2-intl > /dev/null
 
 echo "* Installing memcached extensions..."
-sudo apt-get install -y memcached php-memcache php-memcached php-redis > /dev/null
+sudo apt-get install -y memcached php-memcache php-memcached php7.0-memcached php7.1-memcached php7.2-memcached php7.3-memcached php7.4-memcached php8.0-memcached php8.1-memcached php8.2-memcached php-redis > /dev/null
 
 echo "* Installing imap extensions..."
 sudo apt-get install -y php-imap php7.2-imap php7.3-imap php7.4-imap php8.0-imap php8.1-imap php8.2-imap > /dev/null
@@ -91,6 +91,22 @@ sudo a2enmod vhost_alias
 sudo apt-get install libapache2-mod-fcgid
 sudo apt install software-properties-common
 sudo a2enmod actions alias proxy_fcgi fcgid
+
+echo "* Add an php.ini to your home folder for easy adding of settings to all PHP-versions..."
+
+echo -e "memory_limit = 2G\n" > ~/php.ini
+
+sudo ln -s ~/php.ini /etc/php/5.6/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/7.0/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/7.1/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/7.2/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/7.3/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/7.4/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/8.0/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/8.1/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/8.2/mods-available/php.ini
+
+sudo phpenmod php
 
 echo "* Restart apache..."
 sudo systemctl restart apache2
