@@ -61,6 +61,7 @@ Once setup is complete, you can easily switch between different PHP versions usi
 ./switch-to-php-7.4.sh
 ./switch-to-php-8.0.sh
 ./switch-to-php-8.1.sh
+./switch-to-php-8.2.sh
 ```
 
 This will alter the versions of PHP running in Apache and the command line. Your password will be required to enable/disable Apache modules, restart the web server and alter the default PHP CLI version.
