@@ -9,6 +9,9 @@ sudo a2dismod php7.0 > /dev/null
 echo "* Disabling Apache PHP 7.1 module..."
 sudo a2dismod php7.1 > /dev/null
 
+echo "* Disabling Apache PHP 7.2 module..."
+sudo a2dismod php7.2 > /dev/null
+
 echo "* Disabling Apache PHP 7.3 module..."
 sudo a2dismod php7.3 > /dev/null
 
@@ -18,19 +21,16 @@ sudo a2dismod php7.4 > /dev/null
 echo "* Disabling Apache PHP 8.0 module..."
 sudo a2dismod php8.0 > /dev/null
 
-echo "* Disabling Apache PHP 8.1 module..."
-sudo a2dismod php8.1 > /dev/null
-
 echo "* Disabling Apache PHP 8.2 module..."
 sudo a2dismod php8.2 > /dev/null
 
-echo "* Enabling Apache PHP 7.2 module..."
-sudo a2enmod php7.2 > /dev/null
+echo "* Enabling Apache PHP 8.1 module..."
+sudo a2enmod php8.1 > /dev/null
 
 echo "* Restarting Apache..."
 sudo service apache2 restart > /dev/null
 
-echo "* Switching CLI PHP to 7.2..."
-sudo update-alternatives --set php /usr/bin/php7.2 > /dev/null
+echo "* Switching CLI PHP to 8.1..."
+sudo update-alternatives --set php /usr/bin/php8.1 > /dev/null
 
-echo "* Switch to PHP 7.2 complete."
+echo "* Switch to PHP 8.1 complete."

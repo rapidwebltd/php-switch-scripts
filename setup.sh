@@ -48,6 +48,24 @@ sudo apt-get install -y php7.4 php7.4-common php7.4-cli > /dev/null
 echo "* Installing PHP 7.4 extensions..."
 sudo apt-get install -y php7.4-bz2 php7.4-curl php7.4-gd php7.4-json php7.4-mbstring php7.4-mysql php7.4-opcache php7.4-readline php7.4-soap php7.4-sqlite3 php7.4-tidy php7.4-xml php7.4-xsl php7.4-zip > /dev/null
 
+echo "* Installing PHP 8.0..."
+sudo apt-get install -y php8.0 php8.0-common php8.0-cli > /dev/null
+
+echo "* Installing PHP 8.0 extensions..."
+sudo apt-get install -y php8.0-bz2 php8.0-curl php8.0-gd php8.0-json php8.0-mbstring php8.0-mysql php8.0-opcache php8.0-readline php8.0-soap php8.0-sqlite3 php8.0-tidy php8.0-xml php8.0-xsl php8.0-zip > /dev/null
+
+echo "* Installing PHP 8.1..."
+sudo apt-get install -y php8.1 php8.1-common php8.1-cli > /dev/null
+
+echo "* Installing PHP 8.1 extensions..."
+sudo apt-get install -y php8.1-bz2 php8.1-curl php8.1-gd php8.1-json php8.1-mbstring php8.1-mysql php8.1-opcache php8.1-readline php8.1-soap php8.1-sqlite3 php8.1-tidy php8.1-xml php8.1-xsl php8.1-zip > /dev/null
+
+echo "* Installing PHP 8.2..."
+sudo apt-get install -y php8.2 php8.2-common php8.2-cli > /dev/null
+
+echo "* Installing PHP 8.2 extensions..."
+sudo apt-get install -y php8.2-bz2 php8.2-curl php8.2-gd php8.2-json php8.2-mbstring php8.2-mysql php8.2-opcache php8.2-readline php8.2-soap php8.2-sqlite3 php8.2-tidy php8.2-xml php8.2-xsl php8.2-zip > /dev/null
+
 echo "* Installing additional PHP extensions..."
 sudo apt-get install -y php-memcache php-memcached php-redis  > /dev/null
 
