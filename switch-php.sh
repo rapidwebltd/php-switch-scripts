@@ -58,6 +58,7 @@ CURRENT_PHP_VERSION=$(php -v | head -n 1 | cut -d " " -f 2 | cut -f1-2 -d".")
 
 options=(
     "Cancel, stay on PHP $CURRENT_PHP_VERSION"
+    "8.3"
     "8.2"
     "8.1"
     "8.0"

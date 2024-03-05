@@ -67,21 +67,27 @@ sudo apt-get install -y php8.2 php8.2-common php8.2-cli
 echo "* Installing PHP 8.2 extensions..."
 sudo apt-get install -y php8.2-bz2 php8.2-curl php8.2-gd php8.2-mbstring php8.2-mysql php8.2-opcache php8.2-readline php8.2-soap php8.2-sqlite3 php8.2-tidy php8.2-xml php8.2-xsl php8.2-zip php8.2-intl php8.2-redis
 
+echo "* Installing PHP 8.3..."
+sudo apt-get install -y php8.3 php8.3-common php8.3-cli
+
+echo "* Installing PHP 8.3 extensions..."
+sudo apt-get install -y php8.3-bz2 php8.3-curl php8.3-gd php8.3-mbstring php8.3-mysql php8.3-opcache php8.3-readline php8.3-soap php8.3-sqlite3 php8.3-tidy php8.3-xml php8.3-xsl php8.3-zip php8.3-intl php8.3-redis
+
 echo "* Installing memcached extensions..."
-sudo apt-get install -y memcached php-memcache php-memcached php7.0-memcached php7.1-memcached php7.2-memcached php7.3-memcached php7.4-memcached php8.0-memcached php8.1-memcached php8.2-memcached
+sudo apt-get install -y memcached php-memcache php-memcached php7.0-memcached php7.1-memcached php7.2-memcached php7.3-memcached php7.4-memcached php8.0-memcached php8.1-memcached php8.2-memcached php8.3-memcached
 
 echo "* Installing imap extensions..."
-sudo apt-get install -y php-imap php7.2-imap php7.3-imap php7.4-imap php8.0-imap php8.1-imap php8.2-imap
+sudo apt-get install -y php-imap php7.2-imap php7.3-imap php7.4-imap php8.0-imap php8.1-imap php8.2-imap php8.3-imap
 
 echo "* Installing php-common and gcc..."
 sudo apt-get install php php-common gcc
 
 echo "* Installing imagemagick/imagick extensions..."
 sudo apt-get install imagemagick
-sudo apt-get install php-imagick php5.6-imagick php7.0-imagick php7.1-imagick php7.2-imagick php7.3-imagick php7.4-imagick php8.0-imagick php8.1-imagick php8.2-imagick
+sudo apt-get install php-imagick php5.6-imagick php7.0-imagick php7.1-imagick php7.2-imagick php7.3-imagick php7.4-imagick php8.0-imagick php8.1-imagick php8.2-imagick php8.3-imagick
 
 echo "* Installing PHP-FPM..."
-sudo apt-get install php5.6-fpm php7.0-fpm php7.1-fpm php7.2-fpm php7.3-fpm php7.4-fpm  php8.0-fpm php8.1-fpm php8.2-fpm
+sudo apt-get install php5.6-fpm php7.0-fpm php7.1-fpm php7.2-fpm php7.3-fpm php7.4-fpm  php8.0-fpm php8.1-fpm php8.2-fpm php8.3-fpm
 
 echo "* Enabeling mod_rewrite, mod_headers and vhost_alias..."
 sudo a2enmod rewrite
@@ -93,9 +99,12 @@ sudo apt install software-properties-common
 sudo a2enmod actions alias proxy_fcgi fcgid
 
 echo "* Add an php.ini to your home folder for easy adding of settings to all PHP-versions..."
+ini_file=~/php.ini
+if ! grep -q "^memory_limit" "$ini_file"; then
+    echo "memory_limit = 2G" >> "$ini_file"
+fi
 
-echo -e "memory_limit = 2G\n" > ~/php.ini
-
+echo "* Symlink php.ini for every PHP-version..."
 sudo ln -s ~/php.ini /etc/php/5.6/mods-available/php.ini
 sudo ln -s ~/php.ini /etc/php/7.0/mods-available/php.ini
 sudo ln -s ~/php.ini /etc/php/7.1/mods-available/php.ini
@@ -105,6 +114,7 @@ sudo ln -s ~/php.ini /etc/php/7.4/mods-available/php.ini
 sudo ln -s ~/php.ini /etc/php/8.0/mods-available/php.ini
 sudo ln -s ~/php.ini /etc/php/8.1/mods-available/php.ini
 sudo ln -s ~/php.ini /etc/php/8.2/mods-available/php.ini
+sudo ln -s ~/php.ini /etc/php/8.3/mods-available/php.ini
 
 sudo phpenmod php
 
